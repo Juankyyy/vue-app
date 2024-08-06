@@ -1,26 +1,52 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div class="navbar">  
+      <router-link to="/">Inicio</router-link>
+      <router-link to="/about">Acerca de</router-link>
+      <router-link to="/services">Servicios</router-link>
+    </div>
+
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  $background-color: #222;
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff) format('woff');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+
+  * {
+    font-family: 'Poppins';
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: $background-color;
+    
+    border-radius: 10px;
+
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      color: #fff;
+      margin: 0px 10px;
+      transition: all 0.1s;
+      
+      &:hover {
+          color: #bebebe;
+        }
+    }
+  }
 </style>
