@@ -1,19 +1,9 @@
 <template>
-    <div>
-        <h1>Home</h1>
-    </div>
+    <HeroSection />
+    <FeaturesSection/>
 </template>
 
-<script>
-    export default{
-        name: "HomePage"
-    }
+<script setup>
+import HeroSection from '@/components/Home/Hero/HeroSection.vue';
+import FeaturesSection from '@/components/Home/Features/FeaturesSection.vue';
 </script>
-
-<style lang="sass">
-    $background-color: #222;
-
-    body {
-        color: $background-color
-    }
-</style>

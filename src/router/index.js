@@ -10,17 +10,20 @@ const routes = [
     {
         name: "HomePage",
         path: "/",
-        component: HomePage
+        component: HomePage,
+        meta: { title: 'Home' }
     },
     {
         name: "AboutPage",
         path: "/about",
-        component: AboutPage
+        component: AboutPage,
+        meta: { title: 'About' }
     },
     {
         name: "ServicesPage",
         path: "/services",
-        component: ServicesPage
+        component: ServicesPage,
+        meta: { title: 'Services' }
     }
 ];
 
@@ -28,6 +31,13 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(), routes
     // Configurar el historial del navegar para manejar la navegacion
+});
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.title) {
+        document.title = to.meta.title;
+    }
+    next();
 });
 
 export default router;

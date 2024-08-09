@@ -2,10 +2,8 @@
     <h1>Services</h1>
 </template>
 
-<script>
-export default {
+<script setup>
 
-}
 </script>
 
 <style>
