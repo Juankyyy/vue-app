@@ -1,10 +1,12 @@
 <template>
   <BusinessNavbar />
   <router-view />
+  <BusinessFooter />
 </template>
 
 <script setup>
 import BusinessNavbar from './components/Home/BusinessNavbar.vue';
+import BusinessFooter from './components/BusinessFooter.vue';
 </script>
 
 <style lang="scss">
