@@ -5,13 +5,11 @@
 </template>
 
 <script setup>
-import BusinessNavbar from './components/Home/BusinessNavbar.vue';
+import BusinessNavbar from './components/BusinessNavbar.vue';
 import BusinessFooter from './components/BusinessFooter.vue';
 </script>
 
 <style lang="scss">
-  $background-color: #222;
-
   @font-face {
       font-family: 'Poppins';
       font-style: normal;
