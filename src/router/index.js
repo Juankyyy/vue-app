@@ -3,7 +3,8 @@ import { createRouter, createWebHistory } from "vue-router"; // Vue Router
 // Imports de Componentes
 import HomePage from "@/views/HomePage.vue";
 import AboutPage from "@/views/AboutPage.vue";
-import ServicesPage from "@/views/ServicesPage.vue";
+import ContactPage from "@/views/ContactPage.vue";
+import ApiPage from "@/views/ApiPage.vue";
 
 // Constantes para guardar un array de objetos
 const routes = [
@@ -20,10 +21,16 @@ const routes = [
         meta: { title: 'About' }
     },
     {
-        name: "ServicesPage",
-        path: "/services",
-        component: ServicesPage,
-        meta: { title: 'Services' }
+        name: "ContactPage",
+        path: "/contact",
+        component: ContactPage,
+        meta: { title: 'Contact' }
+    },
+    {
+        name: "ApiPage",
+        path: "/api",
+        component: ApiPage,
+        meta: { title: 'Api' }
     }
 ];
 
